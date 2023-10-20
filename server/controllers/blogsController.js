@@ -1,37 +1,7 @@
 const db = require('../models')
 
-// 1. create blog
 
-const addBlog = async (req, res) => {
-    let info = {
-        title: req.body.title,
-        content: req.body.content,
-        author: req.body.author,
-        
-    }
 
-    const blog = await Blog.create(info)
-    res.status(200).send(blog)
-    console.log(blog)
-
-}
-
-// 2. get all blogs
-
-const getAllBlogs = async (req, res) => {
-    let blogs = await Blog.findAll({})
-    res.status(200).send(blogs)
-
-}
-
-// 3. get single blog
-
-const getBlogByTitle = async (req, res) => {
-
-    let blog = await Blog.findByPk(req.params.id)
-    res.status(200).send(blog)
-
-}
 
 // 4. update Product
 

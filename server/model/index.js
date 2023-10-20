@@ -34,6 +34,8 @@ db.sequelize = sequelize;
 
 db.blogs = require('./blogsModel.js')(sequelize , DataTypes)
 db.discussions = require('./discussionsModel.js')(sequelize , DataTypes)
+db.User = require('./userModel.js')(sequelize , DataTypes)
+
 
 
 db.sequelize.sync({ force: false }).then(() => {
@@ -41,16 +43,6 @@ db.sequelize.sync({ force: false }).then(() => {
 });
 
 
-// 1 to Many Relation
 
-// db.products.hasMany(db.reviews, {
-//     foreignKey: 'product_id',
-//     as: 'review'
-// })
-
-// db.reviews.belongsTo(db.products, {
-//     foreignKey: 'product_id',
-//     as: 'product'
-// })
 
 module.exports = db;

@@ -1,14 +1,12 @@
-body { 
-  background-color:rgb(39, 57, 194);
-          
-}
 
 
 h1{
-  position: absolute;
+  background-color: blue;
   position: relative;
-  left: 84%;
-  margin-top: 90px;
+  width: 250%;
+  right : 70px;
+  float : center;
+  text-align: center;
  font-style: normal;
  font-family: fantasy;
  font-size: 300%;

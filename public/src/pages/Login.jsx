@@ -2,23 +2,22 @@
 import styled from "styled-components";
 import '../css/login.css'
 
-
 const LoginContainer = styled.div`
-  display: flex;
-  position: relative;
-  left: 10%;
   position: absolute;
+  left : 37%;
+  height: 300px;
+  width: 400px;
+  display: flex;
+  margin-top: 100px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin-left: 500px;
 `;
 
 const LoginButton = styled.a`
   display: inline-block;
   padding: 20px 32px;
-  background-color:	#4CBB17; /* Gmail green color */
+  background-color: #4CBB17; /* Gmail green color */
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -31,7 +30,7 @@ const MetaMaskButton = styled.a`
   display: inline-block;
   position: relative;
   padding: 20px 35px;
-  background-color:	#4CBB17; /* MetaMask green color */
+  background-color: #4CBB17;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -53,12 +52,12 @@ const LoginPage = () => {
   return (
     <body>
       <LoginContainer>
-        <LoginButton onClick={handleGmailLogin}>Login with Gmail</LoginButton>
-        <MetaMaskButton onClick={handleMetaMaskLogin}>
-          Login with MetaMask
-        </MetaMaskButton>
-              </LoginContainer>
+          <LoginButton onClick={handleGmailLogin}> Login with Gmail </LoginButton>
+          <MetaMaskButton onClick={handleMetaMaskLogin}> Login with MetaMask </MetaMaskButton>
+      </LoginContainer>
     </body>
+
+    
   );
 };
 
