@@ -1,11 +1,12 @@
-import Loginpic from "../assets/login.gif";
+
 import styled from "styled-components";
 import '../css/login.css'
+
 
 const LoginContainer = styled.div`
   display: flex;
   position: relative;
-  left: 6%;
+  left: 10%;
   position: absolute;
   flex-direction: column;
   justify-content: center;
@@ -16,26 +17,27 @@ const LoginContainer = styled.div`
 
 const LoginButton = styled.a`
   display: inline-block;
-  padding: 10px 32px;
-  background-color: #ff5722; /* Gmail red color */
+  padding: 20px 32px;
+  background-color:	#4CBB17; /* Gmail green color */
   color: white;
   text-decoration: none;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
 const MetaMaskButton = styled.a`
   display: inline-block;
   position: relative;
-  padding: 10px 35px;
-  background-color: #f6851b; /* MetaMask orange color */
+  padding: 20px 35px;
+  background-color:	#4CBB17; /* MetaMask green color */
   color: white;
   text-decoration: none;
   border-radius: 5px;
   cursor: pointer;
 `;
+
 
 const LoginPage = () => {
 
@@ -55,7 +57,7 @@ const LoginPage = () => {
         <MetaMaskButton onClick={handleMetaMaskLogin}>
           Login with MetaMask
         </MetaMaskButton>
-      </LoginContainer>
+              </LoginContainer>
     </body>
   );
 };
