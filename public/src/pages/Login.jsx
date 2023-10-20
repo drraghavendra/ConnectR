@@ -1,10 +1,9 @@
-
-import styled from "styled-components";
-import '../css/login.css'
+import { useState } from 'react';
+import styled from 'styled-components';
 
 const LoginContainer = styled.div`
   position: absolute;
-  left : 37%;
+  left: 37%;
   height: 300px;
   width: 400px;
   display: flex;
@@ -14,51 +13,44 @@ const LoginContainer = styled.div`
   align-items: center;
 `;
 
-const LoginButton = styled.a`
-  display: inline-block;
-  padding: 20px 32px;
-  background-color: #4CBB17; /* Gmail green color */
-  color: white;
-  text-decoration: none;
+const LoginButton = styled.button`
+  padding: 10px;
   border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: 20px;
-`;
-
-const MetaMaskButton = styled.a`
-  display: inline-block;
-  position: relative;
-  padding: 20px 35px;
+  border: none;
   background-color: #4CBB17;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
   cursor: pointer;
 `;
 
+const Login = () => {
+  const [token, setToken] = useState(null);
 
-const LoginPage = () => {
-
-  const handleGmailLogin = () => {
-    alert("Logging in with Gmail...");
-  };
-
-
-  const handleMetaMaskLogin = () => {
-    alert("Logging in with MetaMask wallet address...");
+  const handleMetaMaskLogin = async () => {
+    try {
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const address = accounts[0];
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ address }),
+      });
+      const data = await response.json();
+      const token = data.token;
+      setToken(token);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
-    <body>
-      <LoginContainer>
-          <LoginButton onClick={handleGmailLogin}> Login with Gmail </LoginButton>
-          <MetaMaskButton onClick={handleMetaMaskLogin}> Login with MetaMask </MetaMaskButton>
-      </LoginContainer>
-    </body>
-
-    
+    <LoginContainer>
+      {token ? (
+        <p>You are logged in with MetaMask!</p>
+      ) : (
+        <LoginButton onClick={handleMetaMaskLogin}>Log in with MetaMask</LoginButton>
+      )}
+    </LoginContainer>
   );
 };
 
-export default LoginPage;
+export default Login;
