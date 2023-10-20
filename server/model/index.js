@@ -32,14 +32,14 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.blogs = require('./')
-db.discussions
+db.blogs = require('./blogsModel.js')(sequelize , DataTypes)
+db.discussions = require('./discussionsModel.js')(sequelize , DataTypes)
+
 
 db.sequelize.sync({ force: false }).then(() => {
   console.log("yes re-sync done!");
 });
 
-///                           build the Content creation and consumer logic
 
 // 1 to Many Relation
 
