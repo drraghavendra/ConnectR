@@ -1,17 +1,77 @@
-
-
-h1{
-  background-color: blue;
-  position: relative;
-  width: 250%;
-  right : 70px;
-  float : center;
+h1 {
+  color: black;
+  height: 45px;
+  width: 220%;
+  padding: 10px;
   text-align: center;
- font-style: normal;
- font-family: fantasy;
- font-size: 300%;
- }
+}
 
-div{
+h3 {
+  margin-top: 5px;
+  float : left;
+  margin-left: 10px;
+
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.login-container {
+  background-color: #ffffff;
+  width: 400px;
+  height: 300px;
+  position: relative;
+  left: 75%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  margin-top: 100px;
+}
+
+.App-header {
+  background-color: #f3f3f3;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+  margin-left: 350px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-size: 21px;
+  padding: 16px;
+  margin: 15px;
+  border-radius: 16px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
 }

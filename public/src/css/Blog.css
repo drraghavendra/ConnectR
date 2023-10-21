@@ -1,9 +1,4 @@
-/* body{
-        background-color: #1c5e90;
-} */
-
 .navbar {
-        margin-top: 30px;
         overflow: hidden;
         background-color: #333;
         font-family: Arial, Helvetica, sans-serif;
@@ -11,8 +6,6 @@
         height: 75px;
         top: 0;
         width: 100%;
-        z-index: 1;
-
       }
 
 .navbar ul{
@@ -42,58 +35,58 @@
   color: white;
 }
 
-.blog{
+.blog {
+        height: 400px;
+        width: 400px;
+        flex-direction: column;
         margin-top: 100px;
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-bottom: 100px;
-        height: 350px;
-        position: relative;
-        left: 50%;
-        z-index: 5;
+        position: absolute;
+        display: flex;
+        margin-left: 400px;
         background-color: #90a492;
         border-radius: 25px;
-        padding: 20px;
-        color: white;
+        padding: 15px;
+        padding-bottom: 5px;
         font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
-}
+      }
 
-.blog-header{
-        padding : 20px;
-}
+.blog-header h4{
+        margin-top: 2px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-.blog-body{
-        padding : 20px;
-}
-
-.blog-footer{
-        margin-top: 50px;
-}
-
-button{
-        margin: 5px;
-}
-
-
-
-img {
-        float: right;
-        margin-right: 15px;
-}
-
-.material-icons :hover{
-        animation: pulse 0.5s infinite;
+.blog-body p{
+        position: relative;
+        margin-left: 2px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+} 
+      
+.blog-footer {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
       }
       
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.2);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
+.blog-comments{
+        position: reative;
+        display: flex;
+        font-size: 5px;
+        margin-left: 2px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        
+}
+      
+
+

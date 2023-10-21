@@ -44,22 +44,19 @@ const Blog = () => {
       <div className="blog">
         <div className="blog-header">
           <h4>Blog Title</h4>
-          <h3>Author</h3>
+          <h4>Author</h4>
         </div>
         <div className="blog-body">
           <p>Blog Content</p>
         </div>
-        <div>
-          <img src="my-dapp\public\src\assets\logo512.png" alt="Logo" />
-        </div>
-        <div className="blog-footer">
-          <button onClick={LikeBlog}><i className="material-icons">favorite</i></button>
-          <form>
+        <div className="blog-comments">
+        <form>
             <textarea placeholder="Add a comment"></textarea>
             <button onClick={CommentBlog}>Comment</button>
           </form>
-          <button onClick={DeleteBlog}>Delete</button>
-          <button onClick={EditBlog}>Edit</button>
+          </div>
+          <div className="blog-footer">
+          <button onClick={LikeBlog}><i className="material-icons">favorite</i></button>
         </div>
       </div>
     </body>
